@@ -9,6 +9,11 @@ import scrapy
 
 
 class ClingyingItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    head = scrapy.Field()
+    work = scrapy.Field()
+    company = scrapy.Field()
+    school = scrapy.Field()
+    address = scrapy.Field()
+    call_num = scrapy.Field()
+    work_experience = scrapy.Field()
+    education_experience = scrapy.Field()
