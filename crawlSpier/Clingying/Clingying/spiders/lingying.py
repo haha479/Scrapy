@@ -7,12 +7,13 @@ from scrapy.http import Request
 class LingyingSpider(CrawlSpider):
 	name = 'lingying'
 	allowed_domains = ['www.linkedin.com']
-	start_urls = ['http://www.linkedin.com/']
+	start_urls = ['http://www.linkedin.com/in/qi-hu-24623a117/']
 
 	rules = (
-		Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
+		Rule(LinkExtractor(allow=r'/in/'), follow=False, callback='parse_item'),
 	)
 	def start_requests(self):
+		print('444444444444444444444444444444444444444')
 		cookies = {
 			"bcookie" : "v=2&367ee934-e6b6-4ad2-8bf0-0f0edc6cf84a",
 			"bscookie" : "v=1&201801170221019f135339-0c63-4f5e-8d40-4725e2cb1eb2AQGfyZtpene0WUJ7O9-ci1a2L2VlVkRR",
@@ -26,14 +27,13 @@ class LingyingSpider(CrawlSpider):
 			"_lipt" : "CwEAAAFhA79SKaRCMn-79BqOfTexG6b7qd-h-Q6_jY7tfBpze3v30T2xocjaM1pVca1-zR6uOzHjVjs-AgW8sY630P0_WhvEGDTmQ_5GWRGPotj61qXiI5X5tks",
 			"lidc" : "b=SGST01:g=3:u=1:i=1516186327:t=1516241411:s=AQH4C3sMP8rEH2tRP8ljzChBIrS0Sv3p"
 		}
-		return [Request("http://www.linkedin.com/",cookies=cookies,callback=self.parse)]
-	def parse(self, response):
-		print('----------------------',response.body)
+		return [Request("http://www.linkedin.com/",cookies=cookies,callback=self.zhoubin)]
+	def zhoubin(self, response):
+		print('111111111111111111111111111111111111111')
+		for url in self.start_urls:
+			yield self.make_requests_from_url(url)
 
 	def parse_item(self, response):
-		i = {}
-		#i['domain_id'] = response.xpath('//input[@id="sid"]/@value').extract()
-		#i['name'] = response.xpath('//div[@id="name"]').extract()
-		#i['description'] = response.xpath('//div[@id="description"]').extract()
-		return i
+		print('22222222222222222222222222222222222222')
+		print(response.body)
 

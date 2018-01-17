@@ -43,7 +43,8 @@ DEFAULT_REQUEST_HEADERS = {
   'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
   'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
   'Accept-Language':'zh-CN,zh;q=0.9',
-  'Connection':'keep-alive'
+  'Connection':'keep-alive',
+  #'Cookie':'bcookie="v=2&367ee934-e6b6-4ad2-8bf0-0f0edc6cf84a"; visit="v=1&M"; JSESSIONID="ajax:0519148329685751114"; liap=true; li_at=AQEDASWzNNIE-RVRAAABYQO9T64AAAFhJ8nTrlEAEE3xxRLuscSuw8ctAnXKknLsxORdfm7-XXSUFXDOQxApGbG11VAh9-NoKFYiPCEQ2S1R6Z7JTjzXXPBd25FGtTIEN5TCrKe0ysF7V6ysGH_eMj3i; lang="v=2&lang=zh-cn"; _lipt=CwEAAAFhBDIxHYhHIZWj3W-9k6HvlH3afLRSDBuC__x67IWJbIsr5Shu2YNk8X0vVIsNgZMDgGUsooZ_MrNZwUD3DRhZ5m_NSa2y1O8X3nJdO_mN5cDtyIA_0is; lidc="b=SGST01:g=3:u=1:i=1516194013:t=1516241411:s=AQG9Eg_dB3SH095BbEZxFoE8E1CBPvgi"'
 }
 
 # Enable or disable spider middlewares
